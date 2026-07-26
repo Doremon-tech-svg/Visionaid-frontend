@@ -12,6 +12,7 @@
     "@emailjs/browser": "^4.4.1",
     "@tensorflow-models/coco-ssd": "^2.2.3",
     "@tensorflow/tfjs": "^4.20.0",
+    "@vercel/analytics": "^2.0.1",
     "leaflet": "^1.9.4",
     "lucide-react": "^0.441.0",
     "onnxruntime-web": "^1.27.0",

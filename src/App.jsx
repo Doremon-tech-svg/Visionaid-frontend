@@ -14,6 +14,7 @@ import {
   WifiOff, Settings, ScanText, MapPin, BarChart3, Compass, Navigation, Footprints,
   MessageCircle, TrafficCone, LogIn, LogOut, User,
 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
 
@@ -568,7 +569,7 @@ function App() {
     if (dist < arriveThreshold) {
       const nextIdx = idx + 1;
       if (nextIdx >= steps.length) {
-        speak(language === "hi" ? "आप अपने गंतव्य पर पहुँच गए हैं।" : "You have arrived at your destination.");
+        speak(language === "hi" ? "आप अपने गंतव्य पर ��हुँच गए हैं।" : "You have arrived at your destination.");
         stopNavigation();
       } else {
         navStepIndexRef.current = nextIdx;
@@ -1019,6 +1020,7 @@ function App() {
           onClose={() => setShowMap(false)}
         />
       )}
+      <Analytics />
     </div>
   );
 }
